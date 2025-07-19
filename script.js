@@ -237,7 +237,7 @@ form.addEventListener('submit', e => {
     setTimeout(() => {
       feedbackEl.textContent = '';
       showQuestion();
-    }, 5000);
+    }, 2000);
   } else {
     setTimeout(showSummary, 2000);
   }
