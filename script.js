@@ -250,6 +250,12 @@ function showSummary() {
   scoreEl.textContent = `Richtig: ${correct}, Falsch: ${countries.length - correct}`;
   const pct = ((correct / countries.length) * 100).toFixed(1);
   percentEl.textContent = `Trefferquote: ${pct}%`;
+  if (pct <= 50){
+    commentEl.textContent = "Von nichts kommt nichts!"
+  }
+  else if (pct > 50) {
+    commentEl.textContent = "Gute Leistung! Weiter so!"
+  }
 
   wrongAnswers.forEach(entry => {
     const li = document.createElement('li');
