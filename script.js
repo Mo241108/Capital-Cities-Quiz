@@ -201,7 +201,6 @@ const countries = [
 let index = 0;
 let correct = 0;
 let wrongAnswers = [];
-let number = 0;
 
 const questionEl = document.getElementById('question');
 const form = document.getElementById('answer-form');
@@ -214,8 +213,6 @@ const wrongListEl = document.getElementById('wrong-list');
 const restartBtn = document.getElementById('restart');
 
 function showQuestion() {
-  number += 1;
-  counterEl.textContent = `${number}/197`;
   const q = countries[index];
   questionEl.textContent = `Was ist die Hauptstadt von ${q.country}?`;
 }
@@ -253,12 +250,7 @@ function showSummary() {
   scoreEl.textContent = `Richtig: ${correct}, Falsch: ${countries.length - correct}`;
   const pct = ((correct / countries.length) * 100).toFixed(1);
   percentEl.textContent = `Trefferquote: ${pct}%`;
-  if (pct <= 50){
-    commentEl.textContent = `Von nichts kommt nichts!`
-  }
-  else if (pct > 50) {
-    commentEl.textContent = `Gute Leistung! Weiter so!`
-  }
+
 
   wrongAnswers.forEach(entry => {
     const li = document.createElement('li');
