@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welt-Hauptstädte Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welt-Hauptstädte Quiz</h1>
+    <div id="quiz">
+      <p id="question"></p>
+      <form id="answer-form">
+        <input type="text" id="answer-input" autocomplete="off" placeholder="Deine Antwort..." required>
+        <button type="submit">Abschicken</button>
+      </form>
+      <p id="feedback"></p>
+    </div>
+    <div id="summary" class="hidden">
+      <h2>Ergebnis</h2>
+      <p id="score"></p>
+      <p id="percent"></p>
+      <ul id="wrong-list"></ul>
+      <button id="restart">Neustarten</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
